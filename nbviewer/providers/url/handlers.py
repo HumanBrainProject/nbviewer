@@ -48,7 +48,7 @@ class URLHandler(RenderingHandler):
         remote_url = u"{}://{}/{}".format(proto, netloc, quote(url))
 
         if query:
-            remote_url = remote_url + '?' + query
+            remote_url = remote_url + '/?' + query
         if not url.endswith('.ipynb'):
             # this is how we handle relative links (files/ URLs) in notebooks
             # if it's not a .ipynb URL and it is a link from a notebook,
