@@ -278,7 +278,6 @@ def init_options():
     define("statsd_port", default=8125, help="Port on which statsd is listening for metrics on statsd_host", type=int)
     define("statsd_prefix", default='nbviewer', help="Prefix to use for naming metrics sent to statsd", type=str)
     define("url_prefix", default="", help="URL Prefix", type=str)
-    define("url_prefix", default="", help="URL Prefix", type=str)
 
 def main(argv=None):
     init_options()
