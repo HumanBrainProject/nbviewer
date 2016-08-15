@@ -3,6 +3,10 @@ FROM debian:jessie
 
 MAINTAINER Project Jupyter <jupyter@googlegroups.com>
 
+# BBP proxy configuration
+ENV http_proxy=http://bbpproxy.epfl.ch:80/ https_proxy=http://bbpproxy.epfl.ch:80/
+ENV no_proxy=169.254.169.254,localhost,127.0.0.1,*.epfl.ch,epfl.ch,*.humanbrainproject.eu,humanbrainproject.eu
+
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
   && apt-get install -y -q \
