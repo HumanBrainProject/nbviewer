@@ -240,6 +240,9 @@ def make_app():
             handlers
         )
 
+    if options.url_prefix:
+        handlers = [(options.url_prefix + tpl[0], ) + tpl[1:] for tpl in handlers]
+
     # create the app
     return web.Application(handlers, debug=options.debug, **settings)
 
@@ -274,6 +277,8 @@ def init_options():
     define("statsd_host", default="", help="Host running statsd to send metrics to", type=str)
     define("statsd_port", default=8125, help="Port on which statsd is listening for metrics on statsd_host", type=int)
     define("statsd_prefix", default='nbviewer', help="Prefix to use for naming metrics sent to statsd", type=str)
+    define("url_prefix", default="", help="URL Prefix", type=str)
+    define("url_prefix", default="", help="URL Prefix", type=str)
 
 def main(argv=None):
     init_options()
