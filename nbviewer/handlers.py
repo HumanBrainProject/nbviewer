@@ -4,6 +4,8 @@
 #  Distributed under the terms of the BSD License.  The full license is in
 #  the file COPYING, distributed as part of this software.
 #-----------------------------------------------------------------------------
+import os
+
 from tornado import web
 from tornado.log import app_log
 
@@ -86,6 +88,9 @@ def init_handlers(formats, providers):
         ('/index.html', IndexHandler),
         (r'/faq/?', FAQHandler),
         (r'/create/?', CreateHandler),
+        (r'/static/(.*)', web.StaticFileHandler, {
+            'path': os.path.join(os.path.dirname(__file__), 'static')
+        }),
 
         # don't let super old browsers request data-uris
         (r'.*/data:.*;base64,.*', Custom404),

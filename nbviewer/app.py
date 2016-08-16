@@ -204,6 +204,7 @@ def make_app():
         log_function=log_request,
         jinja2_env=env,
         static_path=static_path,
+        url_prefix=options.url_prefix,
         client=client,
         formats=formats,
         default_format=options.default_format,

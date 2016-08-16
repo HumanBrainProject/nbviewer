@@ -178,7 +178,8 @@ class BaseHandler(web.RequestHandler):
     @property
     def template_namespace(self):
         return {
-            "mathjax_url": self.mathjax_url
+            "mathjax_url": self.mathjax_url,
+            "url_prefix": self.settings['url_prefix'],
         }
 
     def breadcrumbs(self, path, base_url):
