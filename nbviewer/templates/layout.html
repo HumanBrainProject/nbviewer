@@ -50,7 +50,7 @@
   <!--NREND-->
 
   <!-- Le styles -->
-  <link href="/static/build/styles.css" rel="stylesheet">
+  <link href="{{ url_prefix }}/static/build/styles.css" rel="stylesheet">
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -58,15 +58,15 @@
   <![endif]-->
 
   <!-- Le fav and touch icons -->
-  <link rel="shortcut icon" href="/static/ico/ipynb_icon_16x16.png">
+  <link rel="shortcut icon" href="{{ url_prefix }}/static/ico/ipynb_icon_16x16.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144"
-        href="/static/ico/apple-touch-icon-144-precomposed.png">
+        href="{{ url_prefix }}/static/ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114"
-        href="/static/ico/apple-touch-icon-114-precomposed.png">
+        href="{{ url_prefix }}/static/ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72"
-        href="/static/ico/apple-touch-icon-72-precomposed.png">
+        href="{{ url_prefix }}/static/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed"
-        href="/static/ico/apple-touch-icon-57-precomposed.png">
+        href="{{ url_prefix }}/static/ico/apple-touch-icon-57-precomposed.png">
   {% block extra_head %}{% endblock %}
 </head>
 
@@ -74,9 +74,9 @@
 
   <!-- These are loaded at the top of the body so they are available to
        notebook cells when they are loaded below. -->
-  <script src="/static/components/jquery/dist/jquery.min.js"></script>
-  <script src="/static/components/requirejs/require.js"></script>
-  <script src="/static/components/moment/min/moment.min.js"></script>
+  <script src="{{ url_prefix }}/static/components/jquery/dist/jquery.min.js"></script>
+  <script src="{{ url_prefix }}/static/components/requirejs/require.js"></script>
+  <script src="{{ url_prefix }}/static/components/moment/min/moment.min.js"></script>
 
 <!-- Navbar
 ================================================== -->
@@ -88,7 +88,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand" href="/">
-          <img src="/static/img/nav_logo.svg" width="159"/>
+          <img src="{{ url_prefix }}/static/img/nav_logo.svg" width="159"/>
         </a>
       </div>
 
@@ -157,9 +157,9 @@
     </footer>
   {% endblock footer %}
 
-  <script src="/static/components/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/static/components/headroom.js/dist/headroom.min.js"></script>
-  <script src="/static/components/headroom.js/dist/jQuery.headroom.min.js"></script>
+  <script src="{{ url_prefix }}/static/components/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{ url_prefix }}/static/components/headroom.js/dist/headroom.min.js"></script>
+  <script src="{{ url_prefix }}/static/components/headroom.js/dist/jQuery.headroom.min.js"></script>
 
   {% block extra_script %}{% endblock %}
 

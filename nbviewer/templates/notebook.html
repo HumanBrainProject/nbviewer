@@ -41,11 +41,11 @@
   <meta name="twitter:image:src" content="{{ thumbnail | default('http://ipython.org/ipython-doc/dev/_images/ipynb_icon_128x128.png') }}">
 
   {% block style_base %}
-    <link href="/static/build/notebook.css" rel="stylesheet">
+    <link href="{{ url_prefix }}/static/build/notebook.css" rel="stylesheet">
   {% endblock %}
 
   {% if css_theme %}
-    <link href="/static/css/theme/{{css_theme}}.css" rel="stylesheet">
+    <link href="{{ url_prefix }}/static/css/theme/{{css_theme}}.css" rel="stylesheet">
   {% endif %}
 
   {% block mathjax %}
